@@ -18,6 +18,13 @@
     background: darken($color-success, 5%);
   }
 
+  &.alert {
+    background: $color-alert;
+    &:hover {
+      background: darken($color-alert, 5%);
+    }
+  }
+
   &.danger {
     background: $color-warning;
     &:hover {

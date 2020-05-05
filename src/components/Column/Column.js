@@ -17,6 +17,7 @@ class Column extends React.Component {
     icon: PropTypes.node,
     addCard: PropTypes.func,
     name: PropTypes.node,
+    title: PropTypes.string,
   };
 
   static defaultProps = {
@@ -41,9 +42,11 @@ class Column extends React.Component {
 
   render() {
     return (
+      
       <section className={styles.component}>
+
         <h3 className={styles.title}>{this.props.title}
-        <span className={styles.icon}>
+          <span className={styles.icon}>
             <Icon name={this.props.icon} />  
           </span></h3>
         <div className={styles.cards}>
