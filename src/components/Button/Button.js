@@ -1,5 +1,11 @@
 import React from 'react';
 import styles from './Button.scss';
+import PropTypes from 'prop-types';
+
+Button.propTypes = {
+  variant: PropTypes.node,
+};
+
 
 const Button = ({variant = '', ...otherProps}) => (
   <button 
