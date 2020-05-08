@@ -3,9 +3,7 @@ import styles from './Hero.scss';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
-Hero.propTypes = {
-  image: PropTypes.node,
-};
+
 
 const Hero = (props) => (
   <header className={styles.component}>
@@ -16,6 +14,7 @@ const Hero = (props) => (
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
+  image: PropTypes.string,
 };
 
 export default Hero;
