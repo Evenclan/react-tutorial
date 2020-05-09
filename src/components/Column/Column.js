@@ -24,22 +24,6 @@ class Column extends React.Component {
     description: settings.defaultColumnIcon,
   };
 
-  // addCard(title) {
-  //   this.setState((state) => ({
-  //     cards: [
-  //       ...state.cards,
-  //       {
-  //         key: state.cards.length
-  //           ? state.cards[state.cards.length - 1].key + 1
-  //           : 0,
-  //         title,
-  //         icon: 'list-alt',
-  //         cards: [],
-  //       },
-  //     ],
-  //   }));
-  // } Do usunięcia
-
   render() {
     const { title, icon, cards} = this.props;
     return (
@@ -50,12 +34,6 @@ class Column extends React.Component {
           <span className={styles.icon}>
             <Icon name={icon} />  
           </span></h3>
-        <div className={styles.cards}>
-          {cards.map(({ key, ...cardsProps }) => (
-            <Card key={key} {...cardsProps} />
-          ))}
-        </div>
-
         <div className={styles.cards}>
           {cards.map((cardData) => (
             <Card key={cardData.id} {...cardData} />
