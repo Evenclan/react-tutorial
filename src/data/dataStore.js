@@ -87,9 +87,21 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
-    description: 'Interesting things I want to check out!',
+    title: 'Things to do <sup>now!</sup>',
+    description: 'Interesting things I want to do now',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>soon!</sup>',
+    description: 'Interesting things I want to do soon!',
+    image: 'https://image.freepik.com/darmowe-wektory/marmurowy-tekstury-tlo-w-zlocie-i-bielu_1048-12184.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Things to do <sup>later!</sup>',
+    description: 'Interesting things I may want to do someday',
+    image: 'https://image.freepik.com/darmowe-wektory/abstrakcjonistyczne-zlote-linie-na-bialym-tle_1017-23751.jpg',
   },
 ];
 
