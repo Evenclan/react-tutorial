@@ -10,7 +10,7 @@ import Creator from '../Creator/Creator.js';
 
 class List extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.string.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
     image: PropTypes.node,
@@ -24,8 +24,8 @@ class List extends React.Component {
   render() {
     const { title, image, description, columns, addColumn } = this.props;
     return (
-      <Container>
-        <section className={styles.component}>
+      <section className={styles.component}>
+        <Container>
           <Hero titleText={title} image={image} />
           <div className={styles.description}>
             {ReactHtmlParser(description)}
@@ -38,8 +38,8 @@ class List extends React.Component {
           <div className={styles.creator}>
             <Creator text={settings.columnCreatorText} action={addColumn} />
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
     );
   }
 }
