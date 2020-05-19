@@ -19,6 +19,18 @@ export const pageContents = {
   subtitle: 'A simple to-do app, with lists, columns and cards',
 };
 
+export const infoContents = {
+  title: 'This is Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  sample: 'Welcome to Info section. Enjoy your stay',
+};
+
+export const faqContents = {
+  title: 'This is FAQ',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  sample: 'Welcome to FAQ section. Enjoy your stay... If you want :)',
+};
+
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
