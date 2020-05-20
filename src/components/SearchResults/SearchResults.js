@@ -16,8 +16,6 @@ const SearchResults = ({ cards }) => {
               <p>Search results here</p>
             </Link>
           </div>
-
-          
         ))}
       </section>
     </Container>
