@@ -35,22 +35,7 @@ class Search extends React.Component {
   handleOK() {
     // this.props.changeSearchString(this.state.value);
     this.props.history.push(`/search/${this.state.value}`);
-
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.props.history),
-    };
-
-    fetch(options)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (parsedResponse) {
-        console.log('parsedResponse', parsedResponse);
-      });
+    
   }
 
   componentDidUpdate(prevProps) {
