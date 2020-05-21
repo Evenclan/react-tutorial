@@ -6,9 +6,11 @@ import Container from '../Container/Container.js';
 import { Link } from 'react-router-dom';
 
 const SearchResults = ({ cards }) => {
+  console.log(cards);
   return (
     <Container>
       <section className={styles.component}>
+        <h1 className={styles.title}>Your search results:</h1>
         {cards.map((cardData) => (
           <div key={cardData.id}>
             <Card key={cardData.id} {...cardData} />
@@ -21,6 +23,7 @@ const SearchResults = ({ cards }) => {
     </Container>
   );
 };
+
 
 SearchResults.propTypes = {
   cards: PropTypes.array,

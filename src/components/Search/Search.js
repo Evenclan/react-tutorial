@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon';
 import Container from '../Container/Container.js';
-import {withRouter} from 'react-router';
+import { withRouter } from 'react-router';
 
 class Search extends React.Component {
   static propTypes = {
@@ -30,23 +30,41 @@ class Search extends React.Component {
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
     });
-  }
+  };
 
   handleOK() {
     // this.props.changeSearchString(this.state.value);
     this.props.history.push(`/search/${this.state.value}`);
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.props.history),
+    };
+
+    fetch(options)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (parsedResponse) {
+        console.log('parsedResponse', parsedResponse);
+      });
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.searchString != prevProps.searchString) {
       this.setState({ value: this.props.searchString });
     }
+    console.log(prevProps);
   }
 
   render() {
     const { text, countVisible, countAll } = this.props;
     const { value } = this.state;
     const { icon } = settings.search;
+
     return (
       <Container>
         <div className={styles.component}>
@@ -65,7 +83,6 @@ class Search extends React.Component {
             {countVisible == countAll ? '' : `${countVisible} / ${countAll}`}
           </div>
         </div>
-        
       </Container>
     );
   }
