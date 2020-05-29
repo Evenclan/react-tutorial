@@ -9,7 +9,7 @@ import { withRouter } from 'react-router';
 
 class Search extends React.Component {
   static propTypes = {
-    text: PropTypes.string,
+    text: PropTypes.array,
     searchString: PropTypes.string,
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
@@ -18,7 +18,7 @@ class Search extends React.Component {
   };
 
   static defaultProps = {
-    text: settings.search.defaultText,
+    text: window.location.pathname.split('/search/') || settings.search.defaultText,
   };
 
   state = {
@@ -42,7 +42,7 @@ class Search extends React.Component {
     if (this.props.searchString != prevProps.searchString) {
       this.setState({ value: this.props.searchString });
     }
-    console.log(prevProps);
+    console.log(window.location.href);
   }
 
   render() {
